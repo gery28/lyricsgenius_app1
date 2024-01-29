@@ -6,7 +6,6 @@ import lyricsgenius
 genius = lyricsgenius.Genius(os.getenv("CLIENT_ACCESS"), verbose=False)
 
 
-
 def get_albums(artist):
     result = genius.search_artists(search_term=artist)
     album = genius.artist_albums(artist_id=result["sections"][0]["hits"][0]["result"]["id"])
